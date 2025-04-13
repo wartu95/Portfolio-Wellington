@@ -1,29 +1,60 @@
-# 🌐 Portafolio Personal - Wellington Armas
+# 🚀 Portfolio Personal | Wellington Armas
 
-Bienvenido/a a mi portafolio personal. Soy **Wellington Armas**, desarrollador web y técnico informático apasionado por la tecnología, el diseño web y la automatización.
+> Desarrollador de Software & Soluciones Digitales
 
-Este sitio es una landing page sencilla pero funcional, creada con **HTML**, **Tailwind CSS**.
+## 📌 Descripción
 
----
+Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñado con un enfoque minimalista y profesional, utilizando tecnologías modernas para crear una experiencia de usuario fluida y responsive.
 
-## 🧠 Tecnologías usadas
+## 🛠️ Tecnologías
 
-- HTML5
-- Tailwind CSS (desde CDN)
-- Google Fonts (Raleway)
-- Diseño responsivo
-- [Paleta de colores personalizada](https://coolors.co/727d73-aab99a-d0ddd0-f0f0d7)
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
----
+## 🎨 Características
 
-## ✨ Características
+### Diseño
+- Diseño completamente responsive
+- Paleta de colores personalizada
+- Animaciones suaves y transiciones
+- Tipografía Raleway de Google Fonts
 
-- Secciones: Hero, Sobre mí, Proyectos, Servicios, Contacto
-- Navegación suave con anclas
-- Diseño adaptado a distintos tamaños de pantalla
-- Imagen de perfil con estilo moderno
-- Tipografía elegante y moderna
+### Secciones
+- **Hero**: Presentación principal con imagen de perfil
+- **Sobre mí**: Información profesional y tecnologías
+- **Proyectos**: Showcase de trabajos destacados
+- **Servicios**: Servicios profesionales ofrecidos
+- **Contacto**: Formulario y enlaces de contacto
 
-## 📂 Estructura del proyecto
+## 🎯 Paleta de Colores
 
-/ ├── index.html ├── style.css ├── /assets 
+- Principal: `#727D73`
+- Secundario: `#AAB99A`
+- Terciario: `#D0DDD0`
+- Fondo: `#F0F0D7`
+
+## 📁 Estructura del Proyecto
+
+```
+/
+├── index.html
+├── style.css
+├── /assets
+│   ├── images/
+│   └── icons/
+└── README.md
+```
+
+## 🔄 Actualizaciones Futuras
+
+- [ ] Implementación de modo oscuro
+- [ ] Integración con API de GitHub
+- [ ] Blog personal
+- [ ] Sección de testimonios
+
+## 📫 Contacto
+
+- [LinkedIn](https://www.linkedin.com/in/wartudev/)
+- [GitHub](https://github.com/wartu95)
+- Portfolio: [wartudev.com](https://wartu95.github.io/Portfolio-Wellington/)

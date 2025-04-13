@@ -19,16 +19,37 @@
 
 <body class="font-raleway bg-white">
     <main>
-        <header>
+        <header class="relative">
             <nav class="text-black bg-[#F0F0D7]/30 p-6">
-                <div class="container md:mx-auto mx-4 flex flex-row justify-center items-center gap-6 ">
-                    <a href="#hero" class="text-xl font-semibold hover:text-[#578E7E] ">Wartu</a>
-                    <ul class="flex space-x-4">
-                        <li><a href="#sobremi" class="block hover:text-[#578E7E]">Sobre mí</a></li>
-                        <li><a href="#proyectos" class="block hover:text-[#578E7E]">Proyectos</a></li>
-                        <li><a href="#servicios" class="block hover:text-[#578E7E]">Servicios</a></li>
-                        <li><a href="#contacto" class="block hover:text-[#578E7E]">Contacto</a></li>
-                    </ul>
+                <div class="container mx-auto px-4">
+                    <!-- Navbar container -->
+                    <div class="flex justify-between items-center">
+                        <!-- Logo -->
+                        <a href="#hero" class="text-2xl font-bold hover:text-[#578E7E]">Wartu</a>
+
+                        <!-- Menu desktop -->
+                        <ul class="hidden md:flex space-x-8">
+                            <li><a href="#sobremi" class="hover:text-[#578E7E] transition-colors">Sobre mí</a></li>
+                            <li><a href="#proyectos" class="hover:text-[#578E7E] transition-colors">Proyectos</a></li>
+                            <li><a href="#servicios" class="hover:text-[#578E7E] transition-colors">Servicios</a></li>
+                            <li><a href="#contacto" class="hover:text-[#578E7E] transition-colors">Contacto</a></li>
+                        </ul>
+
+                        <!-- Botón menú móvil -->
+                        <button id="movil-menu-button" class="md:hidden focus:outline-none">
+                            <img src="assets/menu-dots-square-svgrepo-com.svg" alt="Icono de menu" class="w-6 h-6">
+                        </button>
+                    </div>
+
+                    <!-- Menú móvil -->
+                    <div id="movil-menu" class="hidden md:hidden">
+                        <ul class="flex flex-col space-y-4 mt-4">
+                            <li><a href="#sobremi" class="block py-2 px-4 hover:text-[#578E7E] hover:bg-gray-100 rounded-lg transition-colors">Sobre mí</a></li>
+                            <li><a href="#proyectos" class="block py-2 px-4 hover:text-[#578E7E] hover:bg-gray-100 rounded-lg transition-colors">Proyectos</a></li>
+                            <li><a href="#servicios" class="block py-2 px-4 hover:text-[#578E7E] hover:bg-gray-100 rounded-lg transition-colors">Servicios</a></li>
+                            <li><a href="#contacto" class="block py-2 px-4 hover:text-[#578E7E] hover:bg-gray-100 rounded-lg transition-colors">Contacto</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -45,7 +66,8 @@
                 <div class="md:w-1/2 text-center md:text-left space-x-4 mt-4 md:mt-0">
                     <h1 class="sm:text-4xl md:text-6xl font-bold text-gray-800">¡Hola! Soy <span
                             class="text-[#727d73]">Wellington Armas</span></h1>
-                    <p class="text-xl sm:text-base text-gray-700 mt-2">Desarrollador de Software & Técnico Informático</p>
+                    <p class="text-xl sm:text-base text-gray-700 mt-2">Desarrollador de Software & Egresado de sistemas
+                    </p>
                     <div class="flex flex-col sm:flex-row  justify- mt-4 px-4 sm:px-4 gap-2">
                         <a href="https://github.com/wartu95" target="_blank"
                             class="inline-flex items-center bg-[#AAB99A] text-[#F0F0D7] px-2 sm:px-4 py-1 sm:py-3 text-sm sm:text-base rounded-2xl shadow-md hover:bg-[#727d73] hover:scale-105 transition-transform">
@@ -68,14 +90,9 @@
                 <!-- Quien soy? -->
                 <div class="md:w-1/2 ">
                     <h3 class="text-4xl mb-6  text-[#727D73]">¿Quién soy?</h3>
-                    <p class="text-lg text-gray-700 ">Un desarrollador web apasionado por
-                        transformar ideas en experiencias digitales impactantes y funcionales. Mi sello distintivo es la
-                        responsabilidad en cada etapa del desarrollo, una curiosidad autodidacta que me impulsa a la
-                        vanguardia y una puntualidad que asegura la entrega de proyectos en tiempo y forma.
+                    <p class="text-lg text-gray-700 ">Desarrollador de software autodidacta y responsable, apasionado por transformar ideas en soluciones digitales impactantes. Puntual y en constante aprendizaje, aseguro la entrega de proyectos de calidad.
                         <br><br>
-                        Mi motor es el aprendizaje continuo y la firme convicción de que la mejora constante es clave en
-                        el mundo digital. Busco desafíos donde mi compromiso, mi capacidad de adaptación y mi dedicación
-                        puedan aportar valor real a sus proyectos web.
+                        Busco activamente oportunidades para aumentar mi experiencia profesional, aportando dedicación y capacidad de adaptación para lograr siempre un buen trabajo en cada proyecto web.
                     </p>
                 </div>
 
@@ -175,5 +192,15 @@
 
     </main>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const movilMenuButton = document.getElementById("movil-menu-button");
+        const movilMenu = document.getElementById("movil-menu");
+
+        movilMenuButton.addEventListener("click", function () {
+            movilMenu.classList.toggle("hidden");
+        });
+    });
+</script>
 
 </html>
