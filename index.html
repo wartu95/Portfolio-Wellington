@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<main>
 
-    <body class="font-raleway">
+<body class="font-raleway bg-white">
+    <main>
         <header>
-            <nav class="text-black bg-[#F0F0D7] p-6">
+            <nav class="text-black bg-[#F0F0D7]/30 p-6">
                 <div class="container mx-auto flex justify-evenly items-center">
                     <a href="#hero" class="text-2xl font-bold hover:text-[#578E7E]">Wartu</a>
                     <ul class="flex space-x-4">
@@ -32,9 +32,9 @@
                 </div>
             </nav>
         </header>
-
-        <section id="hero" class="bg-[#F0F0D7] py-12">
-            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center"> 
+        <!-- Hero Section -->
+        <section id="hero" class="bg-[#F0F0D7]/30 py-12">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center">
 
                 <!-- Imagen -->
                 <div class="md:w-1/2 mt-4 md:mt-0 flex justify-center">
@@ -47,31 +47,127 @@
                             class="text-[#727d73]">Wellington Armas</span></h1>
                     <p class="text-xl sm:text-base text-gray-700 mt-2">Desarrollador Web y Técnico Informatico</p>
                     <a href="#proyectos"
-                        class="inline-block bg-[#727d73] text-white px-6 py-3 mt-2 rounded-2xl shadow.md hover:bg-[#AAB99A] hover:scale-105 transition-transform">Ver
+                        class="inline-block bg-[#727d73] text-white px-6 py-3 mt-2 rounded-2xl shadow.md hover:bg-[#AAB99A] ">
+                        Ver
                         Proyectos</a>
                 </div>
-
-
-
-
             </div>
 
         </section>
-        <section id="sobremi">
-<h1>aaa</h1>
-        </section>
-        <section id="proyectos">
-<h1>ssss</h1>
-        </section>
-        <section id="servicios">
-            <h1>aaaa</h1>
-        </section>
-        <section id="contacto">
-            <h1>aaaaa</h1>
-        </section>
-        <footer></footer>
+        <!-- Sobre mi -->
+        <section id="sobremi" class="bg-[#D0DDD0]/30 py-16 ">
+            <h2 class="text-4xl  text-center mb-12 text-[#727D73]">Sobre mí</h2>
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12">
 
-    </body>
-</main>
+                <!-- Quien soy? -->
+                <div class="md:w-1/2 ">
+                    <h3 class="text-4xl mb-6  text-[#727D73]">¿Quién soy?</h3>
+                    <p class="text-lg text-gray-700 ">Un desarrollador web apasionado por
+                        transformar ideas en experiencias digitales impactantes y funcionales. Mi sello distintivo es la
+                        responsabilidad en cada etapa del desarrollo, una curiosidad autodidacta que me impulsa a la
+                        vanguardia y una puntualidad que asegura la entrega de proyectos en tiempo y forma.
+                        <br><br>
+                        Mi motor es el aprendizaje continuo y la firme convicción de que la mejora constante es clave en
+                        el mundo digital. Busco desafíos donde mi compromiso, mi capacidad de adaptación y mi dedicación
+                        puedan aportar valor real a sus proyectos web.
+                    </p>
+                </div>
+
+
+                <!-- Skills -->
+                <div class="md:w-1/2 flex flex-col items-center">
+                    <h3 class="text-4xl  mb-12 text-[#727D73]">Habilidades Principales</h3>
+                    <div class="grid grid-cols-4 gap-x-8 gap-y-12">
+                        <img src="assets/html-5-logo-svgrepo-com.svg" alt="Logo HTML"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/css-3-svgrepo-com.svg" alt="Logo CSS3"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/tailwindcss-icon-svgrepo-com.svg" alt="Logo tailwindcss"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/javascript-svgrepo-com.svg" alt="Logo Javascript"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/python-svgrepo-com.svg" alt="Logo Python"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/git-svgrepo-com.svg" alt="Logo Git"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/java-svgrepo-com.svg" alt="Logo Java"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                        <img src="assets/Logo-SpringBoot.svg" alt="Logo SprinBoot"
+                            class="w-20 h-20 hover:scale-125 transition-transform duration-300">
+                    </div>
+                </div>
+        </section>
+        <!-- Proyectos -->
+        <section id="proyectos" class="py-16 bg-[#AAB99A]/30">
+            <h2 class="text-center text-3xl text-[#727D73]">Proyectos</h2>
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12 mt-12">
+
+                <!-- Proyecto 1 -->
+                <div
+                    class="md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-[#727D73]">Landing page Wartudev - Venta de cursos</h3>
+                    <img src="/assets/Landing-page-wartudev.png" alt="Captura de pantalla del proyecto landing page"
+                        class="rounded-lg mt-4 mb-4 w-full h-auto object-cover">
+                    <p class="text-gray-700 mt-2">Este proyecto es una landing page diseñada para la venta de cursos
+                        online. Utiliza HTML, CSS y JavaScript para crear una experiencia de usuario atractiva y
+                        funcional.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center mt-4 px-4 sm:px-6 gap-4">
+                        <a href="https://github.com/wartu95/Pagina-web---landing-page/tree/master" target="_blank"
+                            class="inline-flex items-center bg-[#727d73] text-[#F0F0D7] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl shadow-md hover:bg-[#AAB99A] hover:scale-105 transition-transform">
+                            <img src="assets/github-svgrepo-com.svg" alt="Logo GitHub" class="w-6 sm:w-8 mr-2">Ver
+                            Código
+                        </a>
+                        <a href="https://wartu95.github.io/Pagina-web---landing-page/" target="_blank"
+                            class="inline-flex items-center bg-[#727d73] text-[#F0F0D7] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl shadow-md hover:bg-[#AAB99A] hover:scale-105 transition-transform">
+                            <img src="assets/web-link-svgrepo-com.svg" alt="Logo Web" class="w-6 sm:w-8 mr-2">Ir a la
+                            Web
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div
+                    class="md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-[#727D73]">Página de Consulta de IP</h3>
+                    <img src="/assets/618shots_so.png" alt="Captura de la web de consultar Ip"
+                        class="rounded-lg mt-4 mb-4 w-full h-auto object-cover">
+                    <p class="text-gray-700 mt-2">Este proyecto es una aplicación web que permite a los usuarios
+                        consultar información sobre su dirección IP pública. Utiliza HTML, CSS y JavaScript para crear
+                        una interfaz de usuario intuitiva y
+                        funcional.</p>
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center mt-4 px-4 sm:px-6 gap-4">
+                        <a href="https://github.com/wartu95/ConsultaIP" target="_blank"
+                            class="inline-flex items-center bg-[#727d73] text-[#F0F0D7] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl shadow-md hover:bg-[#AAB99A] hover:scale-105 transition-transform">
+                            <img src="assets/github-svgrepo-com.svg" alt="Logo GitHub" class="w-6 sm:w-8 mr-2">Ver
+                            Código
+                        </a>
+                        <a href="https://wartu95.github.io/ConsultaIP/" target="_blank"
+                            class="inline-flex items-center bg-[#727d73] text-[#F0F0D7] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl shadow-md hover:bg-[#AAB99A] hover:scale-105 transition-transform">
+                            <img src="assets/web-link-svgrepo-com.svg" alt="Logo Web" class="w-6 sm:w-8 mr-2">Ir a la
+                            Web
+                        </a>
+                    </div>
+                </div>
+
+
+        </section>
+
+
+
+        <!-- Servicios -->
+        <section id="servicios" class="py-16 ">
+            <h2 class="text-center text-3xl">Servicios</h2>
+        </section>
+        <!-- Contacto -->
+        <section id="contacto" class="py-16">
+            <h2 class="text-center text-3xl">Contacto</h2>
+        </section>
+        <!-- Footer -->
+        <footer class="py-8 bg-[#F0F0D7]/40 text-center text-sm text-gray-600">
+            &copy; 2025 Wellington Armas. Todos los derechos reservados.</footer>
+
+    </main>
+</body>
 
 </html>
