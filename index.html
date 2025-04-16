@@ -17,8 +17,8 @@
 
 </head>
 
-<body class="font-raleway bg-white">
-    <main>
+<body class="font-raleway bg-[#F0F0D7] text-[#727D73]">
+    <main class="container mx-auto px-4">
         <header class="relative">
             <nav class="text-black bg-[#F0F0D7]/30 p-6">
                 <div class="container mx-auto px-4">
@@ -109,7 +109,7 @@
                 <div class="md:w-1/2 flex flex-col items-center">
                     <h3 class="text-4xl  mb-12 text-[#727D73]">Habilidades Principales</h3>
                     <div class="grid grid-cols-4 gap-x-8 gap-y-12">
-                        <img src="assets/html-5-logo-svgrepo-com.svg" alt="Logo HTML"
+                        <img src="assets/html-5-logo-svgrepo-com.svg" alt="Logo de HTML5"
                             class="w-20 h-20 hover:scale-125 transition-transform duration-300">
                         <img src="assets/css-3-svgrepo-com.svg" alt="Logo CSS3"
                             class="w-20 h-20 hover:scale-125 transition-transform duration-300">
@@ -128,6 +128,7 @@
                     </div>
                 </div>
         </section>
+        <br>
         <!-- Proyectos -->
         <section id="proyectos" class="py-16 bg-[#AAB99A]/30">
             <h2 class="text-center text-3xl text-[#727D73]">Proyectos</h2>
@@ -189,54 +190,59 @@
         <!-- Servicios -->
         <section id="servicios" class="  py-12  bg-[#F0F0D7]/30 ">
             <h2 class="text-center text-3xl mb-12 text-[#727D73]">Servicios</h2>
-            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 gap-8">
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-12 gap-8">
                 <!-- Servicio 1 -->
                 <div
                     class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-xl font-bold text-[#727D73]">Desarrollo Web</h3>
-                    <p class="text-gray-700 mt-2">Creación de sitios web personalizados y optimizados para una
-                        experiencia de usuario excepcional.</p>
+                    <img src="assets/web-page-browser-analysis-screen-svgrepo-com.svg" alt="Icono de servicio de landing page"
+                        class="w-16 h-16 mb-2">
+                    <h3 class="text-2xl font-bold text-[#727D73]">Landing Pages</h3>
+                    <p class="text-gray-700 mt-2">Diseño y desarrollo de páginas web modernas, optimizadas y completamente responsivas, utilizando tecnologías como HTML y Tailwind CSS. Ideales para marcas personales, negocios o eventos que buscan una presencia digital profesional y atractiva, adaptada a las necesidades del mercado actual.</p>
                 </div>
 
                 <!-- Servicio 2 -->
                 <div
                     class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-xl font-bold text-[#727D73]">Optimización de Procesos</h3>
-                    <p class="text-gray-700 mt-2">Análisis y mejora de procesos empresariales mediante soluciones tecnológicas eficientes.</p>
+                    <img src="assets/python-svgrepo-com (1).svg" alt="Icono de servicio de automatización"
+                        class="w-16 h-16 mb-2">
+                    <h3 class="text-2xl font-bold text-[#727D73]">Automatización de Procesos con Python.</h3>
+                    <p class="text-gray-700 mt-2">Automatización de tareas repetitivas en Excel, como la carga, organización y análisis de datos, utilizando Python y/o macros VBA. Ideal para empresas que buscan optimizar procesos manuales relacionados con archivos XML, PDF y Excel, mejorando la eficiencia y reduciendo errores.</p>
                 </div>
 
                 <!-- Servicio 3 -->
                 <div
                     class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-xl font-bold text-[#727D73]">Soporte Técnico</h3>
-                    <p class="text-gray-700 mt-2">Asistencia técnica para resolver problemas informáticos y de
-                        software.</p>
+                    <img src="assets/app-svgrepo-com.svg" alt="icono de servicio de aplicaciones web"
+                        class="w-16 h-16 mb-2">
+                    <h3 class="text-2xl font-bold text-[#727D73]">Apps Web Personalizadas para negocios</h3>
+                    <p class="text-gray-700 mt-2">Desarrollo aplicaciones web adaptadas a las necesidades de tu negocio, combinando un diseño moderno en el frontend con una lógica robusta en el backend. Ideal para emprendedores o pequeñas empresas que necesitan digitalizar procesos, gestionar tareas, clientes o servicios desde una plataforma centralizada.</p>
                 </div>
 
             </div>
            
         </section>
+        <br>
         <!-- Contacto -->
-        <section id="contacto" class="py-16 bg-[#D0DDD0]/30">
+        <section id="contacto" class="py-16 bg-[#D0DDD0]/30 " >
             <h2 class="text-center text-3xl mb-12 text-[#727D73]">Contacto</h2>
-            <form class="max-w-2xl mx-auto">
-                <div class="mb-4">
+            <form class="max-w-2xl mx-auto" action="https://formspree.io/f/mdkevngw" method="POST">
+                <div class="mb-4 mx-4">
                     <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
-                <div class="mb-4">
+                <div class="mb-4 mx-4">
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                     <input type="email" id="email" name="email" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
-                <div class="mb-4">
+                <div class="mb-4 mx-4">
                     <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
                 <button type="submit"
-                    class="bg-[#727d73] hover:bg-[#AAB99A] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
+                    class="bg-[#727d73] hover:bg-[#AAB99A] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-4">Enviar</button>
 
             </form>
         </section>
