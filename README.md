@@ -19,6 +19,10 @@ Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñ
 - Paleta de colores personalizada
 - Animaciones suaves y transiciones
 - Tipografía Raleway de Google Fonts
+- **Modo oscuro** implementado para mejorar la accesibilidad y experiencia del usuario
+
+### Accesibilidad
+- Uso de etiquetas `aria` para mejorar la navegación y accesibilidad para lectores de pantalla
 
 ### Secciones
 - **Hero**: Presentación principal con imagen de perfil
@@ -48,7 +52,8 @@ Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñ
 
 ## 🔄 Actualizaciones Futuras
 
-- [ ] Implementación de modo oscuro
+- [x] Implementación de modo oscuro
+- [x] Uso de etiquetas `aria` para accesibilidad
 - [ ] Integración con API de GitHub
 - [ ] Blog personal
 - [ ] Sección de testimonios
