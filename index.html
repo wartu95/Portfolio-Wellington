@@ -9,10 +9,31 @@
     <meta name="theme-color" content="#AAB99A">
     <meta name="description"
         content="Descubre el portfolio de Wellington Armas, desarrollador web y técnico informático. Proyectos, servicios y contacto en un solo lugar.">
-    <link rel="icon" href="assets/ArtuwDev.png" type="image/x-icon">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wartu95.github.io/Portfolio-Wellington/">
+    <meta property="og:title" content="Portfolio de Wellington Armas | Desarrollador Web">
+    <meta property="og:description"
+        content="Desarrollador web y técnico informático especializado en crear soluciones digitales de calidad.">
+    <meta property="og:image" content="https://wartu95.github.io/Portfolio-Wellington/assets/wellington-sobremi.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wartu95.github.io/Portfolio-Wellington/">
+    <meta property="twitter:title" content="Portfolio de Wellington Armas | Desarrollador Web">
+    <meta property="twitter:description"
+        content="Desarrollador web y técnico informático especializado en crear soluciones digitales de calidad.">
+    <meta property="twitter:image" content="https://wartu95.github.io/Portfolio-Wellington/assets/wellington-sobremi.webp">
+
+    <!-- Robots y canonicals -->s
+    <link rel="canonical" href="https://wartu95.github.io/Portfolio-Wellington/">
+
+
+    <link rel="icon" href="assets/Icono-light.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="shema-markup.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class'
@@ -30,7 +51,10 @@
                     <!-- Navbar container -->
                     <div class="flex justify-between items-center">
                         <!-- Logo -->
-                        <a href="#hero" class="text-2xl font-bold hover:text-[#578E7E]">Wartu</a>
+                        <a href="#hero" class="flex items-center hover:scale-125 transition-transform duration-300">
+                            <img src="assets/Icono-light.svg" alt="Logo de wartu" class="w-12 h-12 dark:hidden">
+                            <img src="assets/Icono-dark.svg" alt="Logo de wartu" class="w-12 h-12 hidden dark:block">
+                        </a>
 
                         <!-- Menu desktop -->
                         <ul class="hidden md:flex space-x-8">
@@ -41,16 +65,20 @@
                         </ul>
 
                         <!-- Botón menú móvil -->
-                        <button id="movil-menu-button" class="md:hidden focus:outline-none" aria-expanded="false" aria-controls="movil-menu" aria-label="Abrir menu de navegación">
+                        <button id="movil-menu-button" class="md:hidden focus:outline-none" aria-expanded="false"
+                            aria-controls="movil-menu" aria-label="Abrir menu de navegación">
                             <img src="assets/menu-dots-square-svgrepo-com.svg" alt="Icono de menu" class="w-6 h-6">
                         </button>
 
                         <!-- Botón de cambio de tema -->
-                        <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Cambiar tema" aria-pressed="false">
+                        <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                            aria-label="Cambiar tema" aria-pressed="false">
                             <!-- Sol (modo claro) -->
-                            <img id="theme-toggle-light-icon" src="assets/sun-1-svgrepo-com.svg" alt="Icono de sol" class="w-5 h-5 hidden" />
+                            <img id="theme-toggle-light-icon" src="assets/sun-1-svgrepo-com.svg" alt="Icono de sol"
+                                class="w-5 h-5 hidden" />
                             <!-- Luna (modo oscuro) -->
-                            <img id="theme-toggle-dark-icon" src="assets/moon-stars-svgrepo-com.svg" alt="Icono de luna" class="w-5 h-5 hidden" />
+                            <img id="theme-toggle-dark-icon" src="assets/moon-stars-svgrepo-com.svg" alt="Icono de luna"
+                                class="w-5 h-5 hidden" />
                         </button>
                     </div>
 
@@ -87,7 +115,8 @@
                 <div class="md:w-1/2 text-center md:text-left space-x-4 mt-4 md:mt-0">
                     <h1 class="sm:text-4xl md:text-6xl font-bold text-gray-800 dark:text-white">¡Hola! Soy <span
                             class="text-[#727d73]">Wellington Armas</span></h1>
-                    <p class="text-xl sm:text-base text-gray-700 dark:text-gray-300 mt-2">Desarrollador de Software & Egresado de sistemas
+                    <p class="text-xl sm:text-base text-gray-700 dark:text-gray-300 mt-2">Desarrollador de Software &
+                        Egresado de sistemas
                     </p>
                     <div class="flex flex-col sm:flex-row  justify- mt-4 px-4 sm:px-4 gap-2">
                         <a href="https://github.com/wartu95" target="_blank"
@@ -105,16 +134,21 @@
         </section>
         <br>
         <!-- Sobre mi -->
-        <section id="sobremi" class="bg-[#D0DDD0]/30 dark:bg-gray-800 py-16 ">
+        <section id="sobremi" class="bg-[#D0DDD0]/30 dark:bg-gray-800 py-16 fade-in-section">
             <h2 class="text-4xl  text-center mb-12 text-[#727D73]">Sobre mí</h2>
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12">
 
                 <!-- Quien soy? -->
                 <div class="md:w-1/2 ">
                     <h3 class="text-4xl mb-6  text-[#727D73]">¿Quién soy?</h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300">Desarrollador de software con una sólida base académica en Cómputo e Informática y una fuerte iniciativa autodidacta. Apasionado por transformar ideas en soluciones digitales impactantes, me caracterizo por mi responsabilidad y puntualidad en la entrega de proyectos de calidad.
+                    <p class="text-lg text-gray-700 dark:text-gray-300">Desarrollador de software con una sólida base
+                        académica en Cómputo e Informática y una fuerte iniciativa autodidacta. Apasionado por
+                        transformar ideas en soluciones digitales impactantes, me caracterizo por mi responsabilidad y
+                        puntualidad en la entrega de proyectos de calidad.
                         <br><br>
-                        En la búsqueda activa de oportunidades para enriquecer mi experiencia profesional, me enfoco en el aprendizaje continuo y la adaptación. Mi compromiso es siempre realizar un buen trabajo, aportando valor significativo a cada desafío web que emprendo.
+                        En la búsqueda activa de oportunidades para enriquecer mi experiencia profesional, me enfoco en
+                        el aprendizaje continuo y la adaptación. Mi compromiso es siempre realizar un buen trabajo,
+                        aportando valor significativo a cada desafío web que emprendo.
                     </p>
                 </div>
 
@@ -144,7 +178,7 @@
         </section>
         <br>
         <!-- Proyectos -->
-        <section id="proyectos" class="py-16 bg-[#AAB99A]/30 dark:bg-gray-800">
+        <section id="proyectos" class="py-16 bg-[#AAB99A]/30 dark:bg-gray-800 fade-in-section">
             <h2 class="text-center text-3xl text-[#727D73]">Proyectos</h2>
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12 mt-12">
 
@@ -154,7 +188,8 @@
                     <h3 class="text-xl font-bold text-[#727D73]">Landing page Wartudev - Venta de cursos</h3>
                     <img src="assets/Landing-page-wartudev.png" alt="Captura de pantalla del proyecto landing page"
                         class="rounded-lg mt-4 mb-4 w-full h-auto object-cover">
-                    <p class="text-gray-700 dark:text-gray-300 mt-2">Este proyecto es una landing page diseñada para la venta de cursos
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Este proyecto es una landing page diseñada para la
+                        venta de cursos
                         online. Utiliza HTML, CSS y JavaScript para crear una experiencia de usuario atractiva y
                         funcional.</p>
                     <div class="flex flex-col sm:flex-row items-center justify-center mt-4 px-4 sm:px-6 gap-4">
@@ -177,7 +212,8 @@
                     <h3 class="text-xl font-bold text-[#727D73]">Página de Consulta de IP</h3>
                     <img src="assets/618shots_so.png" alt="Captura de la web de consultar Ip"
                         class="rounded-lg mt-4 mb-4 w-full h-auto object-cover">
-                    <p class="text-gray-700 dark:text-gray-300 mt-2">Este proyecto es una aplicación web que permite a los usuarios
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Este proyecto es una aplicación web que permite a
+                        los usuarios
                         consultar información sobre su dirección IP pública. Utiliza HTML, CSS y JavaScript para crear
                         una interfaz de usuario intuitiva y
                         funcional.</p>
@@ -202,16 +238,19 @@
         <br>
 
         <!-- Servicios -->
-        <section id="servicios" class="  py-12  bg-[#F0F0D7]/30 dark:bg-gray-800 ">
+        <section id="servicios" class="  py-12  bg-[#F0F0D7]/30 dark:bg-gray-800 fade-in-section">
             <h2 class="text-center text-3xl mb-12 text-[#727D73]">Servicios</h2>
             <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-12 gap-8">
                 <!-- Servicio 1 -->
                 <div
                     class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
-                    <img src="assets/web-page-browser-analysis-screen-svgrepo-com.svg" alt="Icono de servicio de landing page"
-                        class="w-16 h-16 mb-2">
+                    <img src="assets/web-page-browser-analysis-screen-svgrepo-com.svg"
+                        alt="Icono de servicio de landing page" class="w-16 h-16 mb-2">
                     <h3 class="text-2xl font-bold text-[#727D73]">Landing Pages</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mt-2">Diseño y desarrollo de páginas web modernas, optimizadas y completamente responsivas, utilizando tecnologías como HTML y Tailwind CSS. Ideales para marcas personales, negocios o eventos que buscan una presencia digital profesional y atractiva, adaptada a las necesidades del mercado actual.</p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Diseño y desarrollo de páginas web modernas,
+                        optimizadas y completamente responsivas, utilizando tecnologías como HTML y Tailwind CSS.
+                        Ideales para marcas personales, negocios o eventos que buscan una presencia digital profesional
+                        y atractiva, adaptada a las necesidades del mercado actual.</p>
                 </div>
 
                 <!-- Servicio 2 -->
@@ -220,7 +259,10 @@
                     <img src="assets/python-svgrepo-com (1).svg" alt="Icono de servicio de automatización"
                         class="w-16 h-16 mb-2">
                     <h3 class="text-2xl font-bold text-[#727D73]">Automatización de Procesos con Python.</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mt-2">Automatización de tareas repetitivas en Excel, como la carga, organización y análisis de datos, utilizando Python y/o macros VBA. Ideal para empresas que buscan optimizar procesos manuales relacionados con archivos XML, PDF y Excel, mejorando la eficiencia y reduciendo errores.</p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Automatización de tareas repetitivas en Excel, como
+                        la carga, organización y análisis de datos, utilizando Python y/o macros VBA. Ideal para
+                        empresas que buscan optimizar procesos manuales relacionados con archivos XML, PDF y Excel,
+                        mejorando la eficiencia y reduciendo errores.</p>
                 </div>
 
                 <!-- Servicio 3 -->
@@ -229,29 +271,35 @@
                     <img src="assets/app-svgrepo-com.svg" alt="icono de servicio de aplicaciones web"
                         class="w-16 h-16 mb-2">
                     <h3 class="text-2xl font-bold text-[#727D73]">Apps Web Personalizadas para negocios</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mt-2">Desarrollo aplicaciones web adaptadas a las necesidades de tu negocio, combinando un diseño moderno en el frontend con una lógica robusta en el backend. Ideal para emprendedores o pequeñas empresas que necesitan digitalizar procesos, gestionar tareas, clientes o servicios desde una plataforma centralizada.</p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Desarrollo aplicaciones web adaptadas a las
+                        necesidades de tu negocio, combinando un diseño moderno en el frontend con una lógica robusta en
+                        el backend. Ideal para emprendedores o pequeñas empresas que necesitan digitalizar procesos,
+                        gestionar tareas, clientes o servicios desde una plataforma centralizada.</p>
                 </div>
 
             </div>
-           
+
         </section>
         <br>
         <!-- Contacto -->
-        <section id="contacto" class="py-16 bg-[#D0DDD0]/30 dark:bg-gray-800 " >
+        <section id="contacto" class="py-16 bg-[#D0DDD0]/30 dark:bg-gray-800 fade-in-section">
             <h2 class="text-center text-3xl mb-12 text-[#727D73]">Contacto</h2>
             <form class="max-w-2xl mx-auto" action="https://formspree.io/f/mdkevngw" method="POST">
                 <div class="mb-4 mx-4">
-                    <label for="nombre" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Nombre:</label>
+                    <label for="nombre"
+                        class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
                 <div class="mb-4 mx-4">
-                    <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email:</label>
+                    <label for="email"
+                        class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email:</label>
                     <input type="email" id="email" name="email" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline">
                 </div>
                 <div class="mb-4 mx-4">
-                    <label for="mensaje" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
+                    <label for="mensaje"
+                        class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
@@ -267,52 +315,6 @@
             &copy; 2025 Wellington Armas. Todos los derechos reservados.</footer>
 
     </main>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const movilMenuButton = document.getElementById("movil-menu-button");
-            const movilMenu = document.getElementById("movil-menu");
-
-            movilMenuButton.addEventListener("click", function () {
-                movilMenu.classList.toggle("hidden");
-            });
-        });
-    </script> -->
-    <script>
-        // Obtener elementos
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-
-        // Función para alternar el tema
-        function toggleDarkMode() {
-            // Cambiar el tema
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light';
-                themeToggleLightIcon.classList.add('hidden');
-                themeToggleDarkIcon.classList.remove('hidden');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.theme = 'dark';
-                themeToggleLightIcon.classList.remove('hidden');
-                themeToggleDarkIcon.classList.add('hidden');
-            }
-        }
-
-        // Configuración inicial
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            themeToggleLightIcon.classList.remove('hidden');
-            themeToggleDarkIcon.classList.add('hidden');
-        } else {
-            document.documentElement.classList.remove('dark');
-            themeToggleLightIcon.classList.add('hidden');
-            themeToggleDarkIcon.classList.remove('hidden');
-        }
-
-        // Event listener para el botón
-        themeToggleBtn.addEventListener('click', toggleDarkMode);
-    </script>
     <script src="script.js"></script>
 </body>
 
