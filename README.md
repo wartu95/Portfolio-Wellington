@@ -15,6 +15,7 @@ Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñ
 ## 🎨 Características
 
 ### Diseño
+
 - Diseño completamente responsive
 - Paleta de colores personalizada
 - Animaciones suaves y transiciones
@@ -22,9 +23,11 @@ Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñ
 - **Modo oscuro** implementado para mejorar la accesibilidad y experiencia del usuario
 
 ### Accesibilidad
+
 - Uso de etiquetas `aria` para mejorar la navegación y accesibilidad para lectores de pantalla
 
 ### Secciones
+
 - **Hero**: Presentación principal con imagen de perfil
 - **Sobre mí**: Información profesional y tecnologías
 - **Proyectos**: Showcase de trabajos destacados

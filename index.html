@@ -23,7 +23,8 @@
     <meta property="twitter:title" content="Portfolio de Wellington Armas | Desarrollador Web">
     <meta property="twitter:description"
         content="Desarrollador web y técnico informático especializado en crear soluciones digitales de calidad.">
-    <meta property="twitter:image" content="https://wartu95.github.io/Portfolio-Wellington/assets/wellington-sobremi.webp">
+    <meta property="twitter:image"
+        content="https://wartu95.github.io/Portfolio-Wellington/assets/wellington-sobremi.webp">
 
     <!-- Robots y canonicals -->
     <link rel="canonical" href="https://wartu95.github.io/Portfolio-Wellington/">
@@ -109,7 +110,8 @@
                 <!-- Imagen -->
                 <div class="md:w-1/2 mt-4 md:mt-0 flex justify-center">
                     <img src="assets/wellington-sobremi.webp" alt="Foto de Wellington"
-                        class="rounded-full shadow-lg w-80 h-80 object-cover hover:scale-110 transition-transform duration-300" loading="lazy">
+                        class="rounded-full shadow-lg w-80 h-80 object-cover hover:scale-110 transition-transform duration-300"
+                        loading="lazy">
                 </div>
                 <!-- Texto -->
                 <div class="md:w-1/2 text-center md:text-left space-x-4 mt-4 md:mt-0">
@@ -176,6 +178,7 @@
                     </div>
                 </div>
         </section>
+
         <br>
         <!-- Proyectos -->
         <section id="proyectos" class="py-16 bg-[#AAB99A]/30 dark:bg-gray-800 fade-in-section">
@@ -216,7 +219,7 @@
                         los usuarios
                         consultar información sobre su dirección IP pública. Utiliza HTML, CSS y JavaScript para crear
                         una interfaz de usuario intuitiva y
-                        funcional.</p>
+                        funcional.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center mt-4 px-4 sm:px-6 gap-4">
                         <a href="https://github.com/wartu95/ConsultaIP" target="_blank"
@@ -284,28 +287,40 @@
         <!-- Contacto -->
         <section id="contacto" class="py-16 bg-[#D0DDD0]/30 dark:bg-gray-800 fade-in-section">
             <h2 class="text-center text-3xl mb-12 text-[#727D73]">Contacto</h2>
-            <form class="max-w-2xl mx-auto" action="https://formspree.io/f/mdkevngw" method="POST">
+            <form id="contactForm" class="max-w-2xl mx-auto" novalidate>
                 <div class="mb-4 mx-4">
                     <label for="nombre"
                         class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required
+                    <input type="text" id="nombre" name="nombre" autocomplete="name"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline">
+                    <p id="error-nombre" class="mt-1 text-sm text-red-600 hidden"></p>
                 </div>
                 <div class="mb-4 mx-4">
                     <label for="email"
                         class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" required
+                    <input type="email" id="email" name="email" autocomplete="email"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline">
+                    <p id="error-email" class="mt-1 text-sm text-red-600 hidden"></p>
                 </div>
                 <div class="mb-4 mx-4">
                     <label for="mensaje"
                         class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required
+                    <textarea id="mensaje" name="mensaje" rows="4"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    <p id="error-mensaje" class="mt-1 text-sm text-red-600 hidden"></p>
                 </div>
-                <button type="submit"
-                    class="bg-[#727d73] hover:bg-[#AAB99A] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-4">Enviar</button>
+                <div class="mx-4 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                    <button id="btnEnviar" type="submit" disabled
+                        class="bg-[#727d73] hover:bg-[#AAB99A] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-4">Enviar
+                        por WhatsApp</button>
 
+                    <!--<a href="https://formspree.io/f/mdkevngw" target="_blank"
+                        class="text-sm underline text-gray-700 dark:text-gray-300 hover:text-[#578E7E]">Prefiero enviar
+                        por email</a> -->
+
+                    <p id="form-status" class="text-sm text-gray-700 dark:text-gray-300" aria-live="polite"></p>
+
+                </div>
             </form>
         </section>
         <br>

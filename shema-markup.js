@@ -15,14 +15,14 @@ const schemaMarkup = `{
     ],
     "knowsAbout": ["HTML", "CSS", "JavaScript", "Python", "Java", "SQL", "Tailwind CSS", "Git", "Spring Boot"]
   }`;
-  
-  // Función para insertar el schema en el head del documento
-  function insertSchemaMarkup() {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = schemaMarkup;
-    document.head.appendChild(script);
-  }
-  
-  // Llama a la función para insertar el schema cuando el DOM esté cargado
-  document.addEventListener('DOMContentLoaded', insertSchemaMarkup);
+
+// Función para insertar el schema en el head del documento
+function insertSchemaMarkup() {
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = schemaMarkup;
+  document.head.appendChild(script);
+}
+
+// Llama a la función para insertar el schema cuando el DOM esté cargado
+document.addEventListener("DOMContentLoaded", insertSchemaMarkup);
