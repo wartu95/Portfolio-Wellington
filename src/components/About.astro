@@ -1,0 +1,49 @@
+---
+import { profile } from "../data/profile";
+
+const pillars = [
+  {
+    title: "Calidad",
+    description: "Código limpio, bien estructurado y pensado para durar. No entrego por entregar.",
+    icon: "*",
+    className: "p-cyan",
+  },
+  {
+    title: "Puntualidad",
+    description: "Gestiono tiempos con claridad. Cada etapa del proyecto tiene dirección y seguimiento.",
+    icon: "⏱",
+    className: "p-violet",
+  },
+  {
+    title: "Claridad",
+    description: "Comunicación directa y soluciones entendibles, sin tecnicismos innecesarios.",
+    icon: "◎",
+    className: "p-mint",
+  },
+];
+---
+
+<section id="sobremi" class="fade-in-section" aria-labelledby="about-title">
+  <span class="section-label">Conóceme</span>
+  <h2 id="about-title" class="section-title">Sobre mí</h2>
+
+  <div class="about-layout">
+    <div class="about-text">
+      {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+
+    <div class="about-pillars" aria-label="Principios de trabajo">
+      {
+        pillars.map((pillar) => (
+          <div class={`pillar-card glass ${pillar.className}`}>
+            <span class="pillar-icon" aria-hidden="true">{pillar.icon}</span>
+            <div class="pillar-body">
+              <p class="pillar-title">{pillar.title}</p>
+              <p class="pillar-desc">{pillar.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

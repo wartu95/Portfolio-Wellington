@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+import { profile } from "../data/profile";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Wellington J. Armas Tuesta | Backend Developer .NET Junior",
+  description = "Portafolio de Wellington J. Armas Tuesta, Backend Developer .NET Junior con experiencia en C#, ASP.NET Core, SQL Server, APIs REST y soluciones empresariales SSOMA.",
+} = Astro.props as Props;
+
+const siteUrl = Astro.site ?? Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, siteUrl).toString();
+const imageUrl = new URL(profile.openGraphImage, siteUrl).toString();
+const profileImageUrl = new URL(profile.image, siteUrl).toString();
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.fullName,
+  url: siteUrl.toString(),
+  image: profileImageUrl,
+  jobTitle: profile.role,
+  worksFor: {
+    "@type": "Organization",
+    name: "MyPer",
+  },
+  sameAs: [profile.githubUrl, profile.linkedinUrl],
+  email: `mailto:${profile.email}`,
+  knowsAbout: [
+    "C#",
+    ".NET",
+    "ASP.NET Core",
+    "SQL Server",
+    "REST API",
+    "Entity Framework Core",
+    "Clean Architecture",
+    "Stored Procedures",
+    "LINQ",
+    "Swagger",
+    "Postman",
+    "Git",
+    "GitHub",
+  ],
+};
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0f1e" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={profile.favicon} type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Raleway:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${profile.fullName}, Backend Developer .NET Junior`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={`${profile.fullName}, Backend Developer .NET Junior`} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "../scripts/fadeIn";
+    </script>
+  </body>
+</html>

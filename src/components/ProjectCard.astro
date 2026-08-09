@@ -1,0 +1,51 @@
+---
+interface Project {
+  title: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+  highlights: string[];
+  codeUrl: string;
+  demoUrl: string | null;
+  stack: string[];
+}
+
+const { project } = Astro.props as { project: Project };
+---
+
+<article class="project-card glass glass-hover">
+  <img
+    src={project.image}
+    alt={project.imageAlt}
+    class="project-card-img"
+    width="1920"
+    height="1440"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="project-card-body">
+    <h3 class="project-card-title">{project.title}</h3>
+    <p class="project-card-desc">{project.description}</p>
+
+    <div class="project-tags" aria-label={`Stack de ${project.title}`}>
+      {project.stack.map((tag) => <span class="project-tag">{tag}</span>)}
+    </div>
+
+    <ul class="project-card-list">
+      {project.highlights.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <div class="card-actions">
+      <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <img src="/assets/github-svgrepo-com.svg" alt="" aria-hidden="true" /> Código
+      </a>
+      {
+        project.demoUrl && (
+          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <img src="/assets/web-link-svgrepo-com.svg" alt="" aria-hidden="true" /> Ver Web
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>

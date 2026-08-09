@@ -1,0 +1,32 @@
+---
+import { experience } from "../data/experience";
+---
+
+<section id="experiencia" class="fade-in-section" aria-labelledby="experience-title">
+  <span class="section-label">Trayectoria</span>
+  <h2 id="experience-title" class="section-title">Experiencia</h2>
+
+  <div class="timeline">
+    {
+      experience.map((item, index) => (
+        <article class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass glass-hover">
+            <div class="exp-header">
+              <h3 class="exp-role">{item.role}</h3>
+              <span class="exp-period">{item.period}</span>
+            </div>
+            <div class="exp-company">{item.company}</div>
+            <p class="exp-desc">{item.description}</p>
+            <ul class:list={["exp-highlights", { "exp-highlights-featured": index === 0 }]}>
+              {item.highlights.map((highlight) => <li>{highlight}</li>)}
+            </ul>
+            <div class="exp-tags" aria-label={`Tecnologías de ${item.role}`}>
+              {item.tags.map((tag) => <span class="exp-tag">{tag}</span>)}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

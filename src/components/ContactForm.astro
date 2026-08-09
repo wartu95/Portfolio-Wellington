@@ -1,0 +1,86 @@
+---
+import { profile } from "../data/profile";
+---
+
+<section id="contacto" class="fade-in-section" aria-labelledby="contact-title">
+  <span class="section-label center">¿Trabajamos juntos?</span>
+  <h2 id="contact-title" class="section-title center">Contacto</h2>
+
+  <div class="contact-wrap">
+    <p class="contact-intro">
+      Si buscas apoyo backend .NET o quieres conversar sobre una oportunidad, puedes escribirme por correo o LinkedIn.
+    </p>
+    <div class="contact-links" aria-label="Canales de contacto directo">
+      <a href={`mailto:${profile.email}`} class="btn-primary">{profile.email}</a>
+      <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+    </div>
+
+    <form
+      id="contactForm"
+      name="contacto"
+      method="POST"
+      action="/"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      novalidate
+    >
+      <input type="hidden" name="form-name" value="contacto" />
+      <p class="form-honeypot" aria-hidden="true">
+        <label>No completar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+      </p>
+      <div class="form-group">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          autocomplete="name"
+          placeholder="Tu nombre completo"
+          class="form-input"
+          minlength="2"
+          required
+          aria-describedby="error-nombre"
+        />
+        <p id="error-nombre" class="form-error" aria-live="polite"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="tu@email.com"
+          class="form-input"
+          required
+          aria-describedby="error-email"
+        />
+        <p id="error-email" class="form-error" aria-live="polite"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          placeholder="Cuéntame sobre tu proyecto..."
+          class="form-input"
+          minlength="10"
+          required
+          aria-describedby="error-mensaje"></textarea>
+        <p id="error-mensaje" class="form-error" aria-live="polite"></p>
+      </div>
+
+      <div class="form-actions">
+        <button id="btnEnviar" type="submit" disabled class="btn-primary">Enviar mensaje</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  import "../scripts/contact";
+</script>

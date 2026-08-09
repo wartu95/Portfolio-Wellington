@@ -1,68 +1,104 @@
-# 🚀 Portfolio Personal | Wellington Armas
+# Portfolio Wellington Armas
 
-> Desarrollador de Software & Soluciones Digitales
+Portafolio profesional de Wellington J. Armas Tuesta, orientado a oportunidades como Backend Developer .NET Junior y preparado para desplegar en Netlify.
 
-## 📌 Descripción
+## Stack
 
-Portfolio personal que muestra mi trabajo como desarrollador de software. Diseñado con un enfoque minimalista y profesional, utilizando tecnologías modernas para crear una experiencia de usuario fluida y responsive.
+- Astro
+- TypeScript
+- CSS global modularizado
+- Netlify
+- `@astrojs/sitemap`
 
-## 🛠️ Tecnologías
+## Características
 
-- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-- ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+- Diseño oscuro de alto contraste, partículas en el hero y animaciones suaves.
+- Contenido separado en archivos de datos dentro de `src/data`.
+- Proyectos agregables sin tocar componentes visuales.
+- SEO base con canonical, Open Graph, Twitter Cards, JSON-LD, sitemap y robots.
+- Formulario de contacto con validación, protección antispam y envío mediante Netlify Forms.
+- CV moderno descargable e imagen Open Graph dedicada.
+- Build estático rápido, ideal para portfolio personal.
 
-## 🎨 Características
+## Estructura
 
-### Diseño
-
-- Diseño completamente responsive
-- Paleta de colores personalizada
-- Animaciones suaves y transiciones
-- Tipografía Raleway de Google Fonts
-- **Modo oscuro** implementado para mejorar la accesibilidad y experiencia del usuario
-
-### Accesibilidad
-
-- Uso de etiquetas `aria` para mejorar la navegación y accesibilidad para lectores de pantalla
-
-### Secciones
-
-- **Hero**: Presentación principal con imagen de perfil
-- **Sobre mí**: Información profesional y tecnologías
-- **Proyectos**: Showcase de trabajos destacados
-- **Servicios**: Servicios profesionales ofrecidos
-- **Contacto**: Formulario y enlaces de contacto
-
-## 🎯 Paleta de Colores
-
-- Principal: `#727D73`
-- Secundario: `#AAB99A`
-- Terciario: `#D0DDD0`
-- Fondo: `#F0F0D7`
-
-## 📁 Estructura del Proyecto
-
-```
-/
-├── index.html
-├── style.css
-├── /assets
-│   ├── images/
-│   └── icons/
-└── README.md
+```txt
+src/
+  components/      Componentes de UI
+  data/            Perfil, proyectos, servicios, skills y experiencia
+  layouts/         Layout base con SEO
+  pages/           Páginas Astro
+  scripts/         Efectos e interacciones del navegador
+  styles/          Estilos globales
+public/
+  assets/          Imágenes e iconos usados por el sitio
 ```
 
-## 🔄 Actualizaciones Futuras
+## Desarrollo local
 
-- [x] Implementación de modo oscuro
-- [x] Uso de etiquetas `aria` para accesibilidad
-- [ ] Integración con API de GitHub
-- [ ] Blog personal
-- [ ] Sección de testimonios
+```bash
+npm install
+npm run dev
+```
 
-## 📫 Contacto
+Abrir:
 
-- [LinkedIn](https://www.linkedin.com/in/wartudev/)
-- [GitHub](https://github.com/wartu95)
-- Portfolio: [wartudev.com](https://wartu95.github.io/Portfolio-Wellington/)
+```txt
+http://127.0.0.1:4321
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+El build genera `dist/`. Esa carpeta no se versiona porque Netlify la genera automáticamente.
+
+## Despliegue en Netlify
+
+Configuración recomendada:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: 20 o superior
+
+El archivo `netlify.toml` ya incluye la configuración de build, headers básicos y cache para assets.
+
+### Recepción de mensajes del formulario
+
+El formulario usa Netlify Forms y envía los datos sin abrir la aplicación de correo del visitante. Después del primer despliegue:
+
+1. En Netlify, activar la detección de formularios en `Forms > Usage and configuration > Form detection`.
+2. Realizar un nuevo despliegue para que Netlify detecte el formulario `contacto`.
+3. En `Project configuration > Notifications > Emails and webhooks > Form submission notifications`, agregar una notificación al correo que recibirá los mensajes.
+
+Los envíos también quedarán registrados en la sección `Forms` del proyecto en Netlify.
+
+## Agregar un proyecto
+
+Editar `src/data/projects.ts` y agregar la imagen en `public/assets`.
+
+Campos principales:
+
+- `title`
+- `image`
+- `imageAlt`
+- `description`
+- `highlights`
+- `codeUrl`
+- `demoUrl`
+- `stack`
+
+No es necesario tocar `Projects.astro` ni `ProjectCard.astro`.
+
+## SEO
+
+Revisar antes de publicar:
+
+- Actualizar `site` en `astro.config.mjs` si cambia el dominio final.
+- Netlify usa automáticamente su variable `URL` para generar canonical, sitemap y metadatos con el dominio asignado.
+- Verificar que `public/robots.txt` apunte al dominio correcto.
+- Usar una imagen Open Graph real y optimizada.
+- Revisar Lighthouse después de desplegar.

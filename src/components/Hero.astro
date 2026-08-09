@@ -1,0 +1,55 @@
+---
+import { profile } from "../data/profile";
+---
+
+<section id="hero" aria-labelledby="hero-title">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="typing-wrap" aria-label={`Roles: ${profile.roles.join(", ")}`}>
+        <span id="typing-text" data-roles={JSON.stringify(profile.roles)}></span><span class="cursor-blink"></span>
+      </div>
+      <h1 id="hero-title" class="hero-h1">
+        Hola, soy <span class="name-accent">{profile.name}</span>
+      </h1>
+      <p class="hero-sub">{profile.headline}</p>
+
+      <div class="hero-btns">
+        <a href={profile.cvUrl} class="btn-primary" download>
+          Descargar CV
+        </a>
+        <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <img src="/assets/linkedin-svgrepo-com.svg" alt="" aria-hidden="true" /> LinkedIn
+        </a>
+        <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <img src="/assets/github-svgrepo-com.svg" alt="" aria-hidden="true" /> GitHub
+        </a>
+      </div>
+
+      <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+        <span class="scroll-label">Desliza</span>
+        <span class="scroll-line"></span>
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <div class="hero-img-glow" aria-hidden="true"></div>
+      <img
+        src={profile.image}
+        alt={`Foto de ${profile.name}`}
+        class="hero-img"
+        width="1315"
+        height="1345"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  import "../scripts/typing";
+  import "../scripts/scrollIndicator";
+  import "../scripts/heroParticles";
+</script>
