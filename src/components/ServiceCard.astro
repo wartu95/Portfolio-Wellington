@@ -1,0 +1,23 @@
+---
+interface Service {
+  title: string;
+  icon: string;
+  iconAlt: string;
+  description: string;
+}
+
+const { service } = Astro.props as { service: Service };
+---
+
+<article class="service-card glass glass-hover">
+  <img
+    src={service.icon}
+    alt={service.iconAlt}
+    class="service-icon"
+    width="52"
+    height="52"
+    loading="lazy"
+  />
+  <h3 class="service-title">{service.title}</h3>
+  <p class="service-desc">{service.description}</p>
+</article>

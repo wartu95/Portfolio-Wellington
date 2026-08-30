@@ -1,0 +1,42 @@
+---
+import { skillCategories } from "../data/skills";
+
+const skills = skillCategories.flatMap((category) =>
+  category.skills.map((skill) => ({
+    ...skill,
+    className: category.className,
+  })),
+);
+---
+
+<section id="habilidades" class="fade-in-section" aria-labelledby="skills-title">
+  <span class="section-label">Stack técnico</span>
+  <h2 id="skills-title" class="section-title">Habilidades</h2>
+
+  <div class="skills-marquee" aria-label="Habilidades técnicas">
+    <div class="skills-marquee-track">
+      {
+        skills.map((skill) => (
+          <span class={`skill-pill ${skill.className}`} tabindex="0">
+            {"icon" in skill && skill.icon && (
+              <img src={skill.icon} alt="" aria-hidden="true" loading="lazy" />
+            )}
+            <span class="pill-dot" aria-hidden="true"></span>
+            {skill.name}
+          </span>
+        ))
+      }
+      {
+        skills.map((skill) => (
+          <span class={`skill-pill ${skill.className}`} aria-hidden="true">
+            {"icon" in skill && skill.icon && (
+              <img src={skill.icon} alt="" aria-hidden="true" loading="lazy" />
+            )}
+            <span class="pill-dot" aria-hidden="true"></span>
+            {skill.name}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>

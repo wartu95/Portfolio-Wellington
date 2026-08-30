@@ -1,0 +1,43 @@
+---
+import { profile } from "../data/profile";
+
+const links = [
+  { href: "#sobremi", label: "Sobre mí" },
+  { href: "#habilidades", label: "Habilidades" },
+  { href: "#experiencia", label: "Experiencia" },
+  { href: "#proyectos", label: "Proyectos" },
+  { href: "#servicios", label: "Capacidades" },
+  { href: "#contacto", label: "Contacto" },
+];
+---
+
+<nav class="nav-glass" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="#hero" aria-label="Inicio">
+      <img src={profile.logo} alt="Logo Wartu" class="logo-img" width="800" height="800" />
+    </a>
+
+    <ul class="nav-links">
+      {links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+    </ul>
+
+    <button
+      id="movil-menu-button"
+      class="mobile-menu-btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="movil-menu"
+      aria-label="Abrir menú de navegación"
+    >
+      ☰
+    </button>
+  </div>
+
+  <div id="movil-menu" class="mobile-menu" aria-hidden="true">
+    {links.map((link) => <a href={link.href}>{link.label}</a>)}
+  </div>
+</nav>
+
+<script>
+  import "../scripts/mobileMenu";
+</script>

@@ -1,0 +1,13 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import { services } from "../data/services";
+---
+
+<section id="servicios" class="fade-in-section" aria-labelledby="services-title">
+  <span class="section-label center">Cómo puedo aportar</span>
+  <h2 id="services-title" class="section-title center">Capacidades</h2>
+
+  <div class="services-grid">
+    {services.map((service) => <ServiceCard service={service} />)}
+  </div>
+</section>

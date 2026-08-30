@@ -1,0 +1,36 @@
+---
+import AmbientBackground from "../components/AmbientBackground.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import Projects from "../components/Projects.astro";
+import Services from "../components/Services.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <AmbientBackground />
+  <div class="site-wrap">
+    <Header />
+    <main id="contenido" tabindex="-1">
+      <Hero />
+      <About />
+      <div class="section-divider"></div>
+      <Skills />
+      <div class="section-divider"></div>
+      <ExperienceTimeline />
+      <div class="section-divider"></div>
+      <Projects />
+      <div class="section-divider"></div>
+      <Services />
+      <div class="section-divider"></div>
+      <ContactForm />
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>
