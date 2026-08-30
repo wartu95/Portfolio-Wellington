@@ -12,6 +12,7 @@ const {
   description = "Portafolio de Wellington J. Armas Tuesta, Backend Developer .NET Junior con experiencia en C#, ASP.NET Core, SQL Server, APIs REST y soluciones empresariales SSOMA.",
 } = Astro.props as Props;
 
+const isProduction = process.env.CONTEXT ? process.env.CONTEXT === "production" : true;
 const siteUrl = Astro.site ?? Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, siteUrl).toString();
 const imageUrl = new URL(profile.openGraphImage, siteUrl).toString();
@@ -53,7 +54,7 @@ const schema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={isProduction ? "index, follow" : "noindex, nofollow"} />
     <meta name="theme-color" content="#0a0f1e" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -66,6 +67,7 @@ const schema = {
     />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Portafolio de Wellington Armas" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
