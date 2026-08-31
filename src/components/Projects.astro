@@ -3,29 +3,24 @@ import ProjectCard from "./ProjectCard.astro";
 import { projects } from "../data/projects";
 ---
 
-<div class="projects-scroll-wrapper" id="projects-scroll-wrapper">
-  <div class="projects-sticky">
-    <section id="proyectos" class="fade-in-section projects-section" aria-labelledby="projects-title">
-      <div class="projects-sticky-header">
-        <span class="section-label center">Trabajo reciente</span>
-        <h2 id="projects-title" class="section-title center">Proyectos</h2>
-      </div>
-
-      <div class="carousel-outer" id="carousel-outer">
-        <div class="carousel-track" id="carousel-track">
-          {projects.map((project) => <ProjectCard project={project} />)}
-        </div>
-        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
-      </div>
-
-      <div class="carousel-controls">
-        <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Proyecto anterior">←</button>
-        <div class="carousel-dots" id="carousel-dots" aria-label="Selector de proyectos"></div>
-        <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Proyecto siguiente">→</button>
-      </div>
-    </section>
+<section id="proyectos" class="fade-in-section projects-section" aria-labelledby="projects-title">
+  <div class="projects-header">
+    <span class="section-label center">Trabajo reciente</span>
+    <h2 id="projects-title" class="section-title center">Proyectos</h2>
   </div>
-</div>
+
+  <div class="carousel-outer">
+    <div class="carousel-track" id="carousel-track">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Proyecto anterior">←</button>
+    <div class="carousel-dots" id="carousel-dots" aria-label="Selector de proyectos"></div>
+    <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Proyecto siguiente">→</button>
+  </div>
+</section>
 
 <script>
   import "../scripts/projectsCarousel";
