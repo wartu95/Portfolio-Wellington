@@ -18,9 +18,6 @@ const skills = skillCategories.flatMap((category) =>
       {
         skills.map((skill) => (
           <span class={`skill-pill ${skill.className}`} tabindex="0">
-            {"icon" in skill && skill.icon && (
-              <img src={skill.icon} alt="" aria-hidden="true" loading="lazy" />
-            )}
             <span class="pill-dot" aria-hidden="true"></span>
             {skill.name}
           </span>
@@ -29,9 +26,6 @@ const skills = skillCategories.flatMap((category) =>
       {
         skills.map((skill) => (
           <span class={`skill-pill ${skill.className}`} aria-hidden="true">
-            {"icon" in skill && skill.icon && (
-              <img src={skill.icon} alt="" aria-hidden="true" loading="lazy" />
-            )}
             <span class="pill-dot" aria-hidden="true"></span>
             {skill.name}
           </span>

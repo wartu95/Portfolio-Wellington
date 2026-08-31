@@ -736,31 +736,26 @@ section {
 }
 
 .skills-marquee {
+  --marquee-fade: clamp(2.5rem, 8vw, 5.625rem);
+
   position: relative;
   overflow: hidden;
   padding: 1rem 0;
   border-block: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.skills-marquee::before,
-.skills-marquee::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 90px;
-  pointer-events: none;
-  content: "";
-}
-
-.skills-marquee::before {
-  left: 0;
-  background: linear-gradient(to right, var(--c-bg), transparent);
-}
-
-.skills-marquee::after {
-  right: 0;
-  background: linear-gradient(to left, var(--c-bg), transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
 }
 
 .skills-marquee-track {
@@ -863,12 +858,6 @@ section {
   border-color: rgba(87, 229, 160, 0.5);
   background: rgba(87, 229, 160, 0.1);
   box-shadow: 0 4px 18px rgba(87, 229, 160, 0.18);
-}
-
-.skill-pill img {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
 }
 
 .pill-dot {
@@ -1666,6 +1655,8 @@ footer {
 
   .skills-marquee {
     overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .skills-marquee-track {

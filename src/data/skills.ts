@@ -35,8 +35,8 @@ export const skillCategories = [
     label: "Herramientas",
     className: "cat-tools",
     skills: [
-      { name: "Git", icon: "/assets/git-svgrepo-com.svg" },
-      { name: "GitHub", icon: "/assets/github-svgrepo-com.svg" },
+      { name: "Git" },
+      { name: "GitHub" },
       { name: "Visual Studio" },
       { name: "Scrum" },
     ],
