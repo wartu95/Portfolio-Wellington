@@ -4,6 +4,8 @@ dist/
 .netlify/
 .tmp/
 .impeccable/
+.agents/
+skills-lock.json
 docs/
 DESIGN.md
 PRODUCT.md

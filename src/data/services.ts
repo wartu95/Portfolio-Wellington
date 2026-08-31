@@ -11,7 +11,7 @@ export const services = [
     icon: "/assets/web-link-svgrepo-com.svg",
     iconAlt: "Icono de integración entre sistemas",
     description:
-      "Integración de servicios empresariales, consultas SQL Server, procedimientos almacenados y procesos de intercambio de información con ERP.",
+      "Integración de servicios empresariales, consultas SQL Server, procedimientos almacenados y procesos de intercambio de información con sistemas externos.",
   },
   {
     title: "Mantenimiento y calidad",
